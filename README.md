@@ -2,7 +2,7 @@
 
 # Common Inventory (Key-Value Store)
 
-Will be provided via a Key-Value (KV) store, for the initial release ***etcd*** will be used. Any KV store must both provide a RESTful API and a server-side create-read-update-delete (CRUD) interface. Regarding choice of Key-Value store refer to [here](https://etcd.io/docs/v3.2.17/learning/why/) for comparison, though ***etcd*** v3.3 maximum database size is 10Gib; for details on performance related aspects refer [here](https://coreos.com/blog/announcing-etcd-3.3#:~:text=The%20maximum%20database%20size%20limit,an%20upper%2Dbound%20for%20recovery). While 10Gib is small to some SQL/NoSQL databases, KV Stores are designed to hold values against a key and not large quantities of data such as telemetry.
+Will be provided via a Key-Value (KV) store, for the initial release 
 
 - in the case of binary/raw/large data such as IPDR, SNMP traps, SYSLOG events, the KV Store would hold a suitable pointer to an external URL (and/or filesystem entity)
 - The KV Store itself does not have a predefined data model structure as is focused on key-value pairs; in order to provide structure the key name itself can include delimiter to represent a path; for example /country/state/town/district/street-name
