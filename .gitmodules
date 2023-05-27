@@ -1,0 +1,3 @@
+[submodule "kv-submodule"]
+	path = kv-submodule
+	url = git@github.com:leecowdrey/kv.git
